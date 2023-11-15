@@ -3,7 +3,7 @@ A Python client for the Friendly Captcha service. This client allows for easy in
 
 # Installation
 ```bash
-pip install friendly-captcha-sdk
+pip install friendly-captcha-client
 ```
 
 # Usage
