@@ -8,13 +8,13 @@ app = FastAPI()
 
 templates = Jinja2Templates(directory="./templates/")
 
-FRC_SITE_KEY = os.getenv("FRC_SITE_KEY")
+FRC_SITEKEY = os.getenv("FRC_SITEKEY")
 FRC_APIKEY = os.getenv("FRC_APIKEY")
 FRIENDLY_SERVICE_ENDPOINT = os.getenv("FRIENDLY_SERVICE_ENDPOINT")
 
 frc_client = FriendlyCaptchaClient(
     api_key=FRC_APIKEY,
-    sitekey=FRC_SITE_KEY,
+    sitekey=FRC_SITEKEY,
     # https://developer.friendlycaptcha.com/docs/api/endpoints/siteverify
     siteverify_endpoint=FRIENDLY_SERVICE_ENDPOINT + "/siteverify"
     if FRIENDLY_SERVICE_ENDPOINT
@@ -31,7 +31,7 @@ def read_root(request: Request):
             "request": request,
             "submitted": False,
             "message": "Bots are not welcome!",
-            "sitekey": FRC_SITE_KEY,
+            "sitekey": FRC_SITEKEY,
             # This could be set in the HTML code as well
             "friendly_service_endpoint": FRIENDLY_SERVICE_ENDPOINT,
         },
@@ -67,7 +67,7 @@ def post_form(
                 "request": request,
                 "submitted": True,
                 "message": "Success",
-                "sitekey": FRC_SITE_KEY,
+                "sitekey": FRC_SITEKEY,
                 # This could be set in the HTML code as well
                 "friendly_service_endpoint": FRIENDLY_SERVICE_ENDPOINT,
             },
@@ -79,7 +79,7 @@ def post_form(
             "request": request,
             "submitted": True,
             "message": "Failed to verify",
-            "sitekey": FRC_SITE_KEY,
+            "sitekey": FRC_SITEKEY,
             # This could be set in the HTML code as well
             "friendly_service_endpoint": FRIENDLY_SERVICE_ENDPOINT,
         },
