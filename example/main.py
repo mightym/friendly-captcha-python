@@ -29,11 +29,11 @@ def read_root(request: Request):
         "demo.html",
         {
             "request": request,
-            "Submitted": False,
-            "Message": "Bots are not welcomed!",
-            "Sitekey": FRC_SITE_KEY,
+            "submitted": False,
+            "message": "Bots are not welcome!",
+            "sitekey": FRC_SITE_KEY,
             # This could be set in the HTML code as well
-            "Friendly_service_endpoint": FRIENDLY_SERVICE_ENDPOINT,
+            "friendly_service_endpoint": FRIENDLY_SERVICE_ENDPOINT,
         },
     )
 
@@ -65,11 +65,11 @@ def post_form(
             "demo.html",
             {
                 "request": request,
-                "Submitted": True,
-                "Message": "Success",
-                "Sitekey": FRC_SITE_KEY,
+                "submitted": True,
+                "message": "Success",
+                "sitekey": FRC_SITE_KEY,
                 # This could be set in the HTML code as well
-                "Friendly_service_endpoint": FRIENDLY_SERVICE_ENDPOINT,
+                "friendly_service_endpoint": FRIENDLY_SERVICE_ENDPOINT,
             },
         )
 
@@ -77,10 +77,10 @@ def post_form(
         "demo.html",
         {
             "request": request,
-            "Submitted": True,
-            "Message": "Failed to verify",
-            "Sitekey": FRC_SITE_KEY,
+            "submitted": True,
+            "message": "Failed to verify",
+            "sitekey": FRC_SITE_KEY,
             # This could be set in the HTML code as well
-            "Friendly_service_endpoint": FRIENDLY_SERVICE_ENDPOINT,
+            "friendly_service_endpoint": FRIENDLY_SERVICE_ENDPOINT,
         },
     )

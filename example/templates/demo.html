@@ -52,15 +52,15 @@
 
 <body>
   <main>
-    {% if Submitted %}
+    {% if submitted %}
     <div class="success-box">
       <h1>Thanks for your message!</h1>
     </div>
     {% endif %}
 
     <h1>Friendly Captcha Python SDK form</h1>
-    {% if Message %}
-    <p style="color: #ba1f1f">{{ Message }}</p>
+    {% if message %}
+    <p style="color: #ba1f1f">{{ message }}</p>
     {% endif %}
     <form method="POST">
       <div class="form-group">
@@ -69,8 +69,8 @@
         <label>Message:</label><br />
         <textarea name="message"></textarea><br />
 
-        <div class="frc-captcha" data-sitekey="{{ Sitekey }}" data-start="auto"
-          data-api-endpoint="{{ Friendly_service_endpoint }}"></div>
+        <div class="frc-captcha" data-sitekey="{{ sitekey }}" data-start="auto"
+          data-api-endpoint="{{ friendly_service_endpoint }}"></div>
         <input style="margin-top: 1em" type="submit" value="Submit" />
       </div>
     </form>
