@@ -282,7 +282,7 @@ class FriendlyCaptchaClient:
                 "Content-Type": "application/json",
                 "Accept": "application/json",
                 "X-Api-Key": self.api_key,
-                "X-Frc-Sdk": f"friendly-captcha-python-sdk@{self._get_current_version()}",
+                "Frc-Sdk": f"friendly-captcha-python@{self._get_current_version()}",
             },
             timeout=timeout,
         )
