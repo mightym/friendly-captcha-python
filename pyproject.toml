@@ -18,7 +18,7 @@ keywords = ["Friendly Captcha Client", "Captcha"]
 [tool.poetry.dependencies]
 python = "^3.6"
 requests = "2.32.3"
-pydantic = "2.1.1"
+pydantic = "^2.10"
 
 [tool.poetry.dev-dependencies]
 pytest = "7.4.0"
